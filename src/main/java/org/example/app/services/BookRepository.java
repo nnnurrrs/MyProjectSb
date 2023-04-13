@@ -30,7 +30,7 @@ public class BookRepository<T> implements ProjectRepository<Book>, ApplicationCo
     }
 
     @Override
-    public boolean removeItemById(Integer bookIdToRemove) {
+    public boolean removeItemById(String bookIdToRemove) {
         for (Book book : retreiveAll()) {
             if (book.getId().equals(bookIdToRemove)) {
                 logger.info("remove book completed: " + book);
